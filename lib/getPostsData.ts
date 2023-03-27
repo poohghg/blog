@@ -16,7 +16,7 @@ export function getPostsData() {
       const id = file.replace(/\.md$/, '');
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const { data: frontmatter } = matter(fileContents);
-      console.log(frontmatter);
+      // console.log(frontmatter);
       return { id, frontmatter };
     });
     return posts;
