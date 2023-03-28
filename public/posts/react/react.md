@@ -1,6 +1,7 @@
 ---
-title: 타이틀dasdsad
-slug: main
+title: 빅오(BIG 0)소개
+slug: home
+src: test
 ---
 
 ### testtest

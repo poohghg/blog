@@ -3,10 +3,16 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import { getPostsData } from '@/lib/getPostsData';
+import { Post } from '@/types/post';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+interface Props {
+  posts: Post[];
+}
+
+export default function Home({ posts }: Props) {
+  console.log(posts);
   return (
     <>
       <Head>
@@ -21,8 +27,8 @@ export default function Home() {
 }
 
 export function getStaticProps() {
-  getPostsData();
+  const posts = getPostsData();
   return {
-    props: {},
+    props: { posts },
   };
 }
