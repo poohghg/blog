@@ -6,6 +6,9 @@ const nextConfig = {
     config.resolve.fallback = { fs: false };
     return config;
   },
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 module.exports = nextConfig;
